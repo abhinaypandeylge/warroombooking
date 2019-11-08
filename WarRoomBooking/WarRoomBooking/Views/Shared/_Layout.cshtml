@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>@ViewBag.Title - War Room Scheduler</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")    
+    @Scripts.Render("~/Public/SideNav.js")
+    @Styles.Render("~/Style/icon.css")
+    @Styles.Render("~/Style/SideNav.css")
+    @Styles.Render("~/Style/main.css")
+</head>
+<body>
+    <div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href='@Url.Action("Index", "Project")'>WRS</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Project
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            @Html.ActionLink("Information", "Index", "Project", null, new { @class = "dropdown-item" })
+                            <div class="dropdown-divider"></div>
+                            @Html.ActionLink("Creation", "Creation", "Project", null, new { @class = "dropdown-item" })
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Scheduler
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            @Html.ActionLink("Information", "Index", "Schedule", null, new { @class = "dropdown-item" })
+                            <div class="dropdown-divider"></div>
+                            @Html.ActionLink("Creation", "Creation", "Schedule", null, new { @class = "dropdown-item" })
+                        </div>
+                    </li>
+                    <li>@Html.ActionLink("Risk Information", "Index", "Risk", null, new { @class = "nav-link" })</li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <spn class="sidetext">Hello,</spn><a href="#">{Username}</a>
+        <a href="#">{Roles}</a>
+        <a href="#">{Project count}</a>
+        <a href="#">{Room assigned}</a>
+    </div>
+
+    <!-- Use any element to open the sidenav -->
+    <span onclick="openNav()" class="sidebtn"><i class="fa fa-angle-right"></i></span>
+
+    <div id="main" class="body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - War Room Scheduler - LG Soft India</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)   
+
+</body>
+</html>

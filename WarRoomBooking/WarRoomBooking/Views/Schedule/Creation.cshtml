@@ -1,0 +1,65 @@
+﻿
+@{
+    ViewBag.Title = "War Room Schedule";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Schedule Creation</h2>
+
+<fieldset>
+    <div class="row">
+        <div class="col-sm-4 form-group">
+            <label>Cycle No.:</label>
+            <input type="text" class="form-control" />
+        </div>
+        <div class="col-sm-4 form-group">
+            <label>Start Date:</label>
+            <input type="date" class="form-control" />
+        </div>
+        <div class="col-sm-4 form-group">
+            <label>End Date:</label>
+            <input type="date" class="form-control" />
+        </div>
+        <div class="col-sm-4 form-group">
+            <label>Project Name:</label>
+            <input type="text" class="form-control" />
+        </div>
+        <div class="col-sm-4 form-group">
+            <label>Target Date:</label>
+            <input type="date" class="form-control" />
+        </div>
+        <div class="col-sm-4 form-group">
+            <label>Remarks:</label>
+            <textarea class="form-control"></textarea>
+        </div>
+    </div>
+    <div class="form-group">
+        <input type="button" value="Save" class="btn btn-primary" />
+        <input type="button" value="Cancel" class="btn btn-secondary" />
+    </div>
+</fieldset>
+<fieldset>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Cycle No.</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th>Remarks</th>
+                <th>Project Name</th>
+                <th>Target Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><label class="pull-right">1</label></td>
+                <td><input type="text" class="form-control" disabled /></td>
+                <td><input type="text" class="form-control" disabled /></td>
+                <td><textarea class="form-control" style="height:38px;"></textarea></td>
+                <td><input type="text" class="form-control" disabled /></td>
+                <td><input type="text" class="form-control" disabled /></td>
+            </tr>
+        </tbody>
+    </table>
+</fieldset>
+

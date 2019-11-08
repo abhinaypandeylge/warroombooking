@@ -1,0 +1,60 @@
+﻿
+@{
+    ViewBag.Title = "War Room Schedule";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="page-header">Schedule Details</h2>
+
+<fieldset>
+    <div class="row col-sm-12 mb-1">
+        <div class="col-sm-6 mb-1">
+            <label>Start date</label>
+            <input id="startDate" type="date" class="form-control" />
+        </div>
+        <div class="col-sm-6 mb-1">
+            <label>End date</label>
+            <input id="endDate" type="date" class="form-control" />
+        </div>
+        <div class="col-sm-12">
+            <input type="button" value="Load" onclick="" class="btn btn-primary" />
+        </div>
+    </div>
+</fieldset>
+<hr />
+<fieldset>
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped">
+            <tr class="text-nowrap">
+                <th>
+                    Project Name
+                </th>
+                <th>
+                    Room Assigned
+                </th>
+                @for (DateTime date = DateTime.Now; date < DateTime.Now.AddDays(30); date = date.AddDays(1.0))
+                {
+                    <th>@date.Date.ToShortDateString()</th>
+                }
+            </tr>
+            @for (int i=0;i<5;i++)
+            {
+                <tr>
+                    <td>{Proj1}</td>
+                    <td>{Room1}</td>
+                    @for (DateTime date = DateTime.Now; date < DateTime.Now.AddDays(30); date = date.AddDays(1.0))
+                    {
+                        if (date.DayOfWeek.ToString().ToLower() == "saturday" || date.DayOfWeek.ToString().ToLower() == "sunday")
+                        {
+                            <td class="disabled"></td>
+                        }
+                        else
+                        {
+                            <td></td>
+                        }
+                    }
+                </tr>
+            }            
+        </table>
+    </div>
+</fieldset>

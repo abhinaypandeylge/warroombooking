@@ -1,0 +1,11 @@
+{
+  "name": "WarRoomBooking",
+  "version": "1.0.0",
+  "description": "Application to create project and scheduler",
+  "main": "\u001b[A\u001b[B",
+  "scripts": {
+    "test": "\u001b[A\u001b[Bgrunt createStyle"
+  },
+  "author": "Abhinay Pandey",
+  "license": "ISC"
+}

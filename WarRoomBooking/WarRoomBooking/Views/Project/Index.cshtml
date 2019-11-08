@@ -1,0 +1,75 @@
+﻿
+@{
+    ViewBag.Title = "War Room Schedule";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="page-header">Project Details</h2>
+
+<div class="form-group">
+    <fieldset>
+        <div class="row col-sm-12 mb-1">
+            <div class="col-sm-6 mb-1">
+                <label>Start date</label>
+                <input id="startDate" type="date" class="form-control" />
+            </div>
+            <div class="col-sm-6 mb-1">
+                <label>End date</label>
+                <input id="endDate" type="date" class="form-control" />
+            </div>
+            <div class="col-sm-12">
+                <input type="button" value="Load" onclick="" class="btn btn-primary" />
+            </div>
+        </div>
+    </fieldset>
+    <fieldset>
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped">
+                <tr class="text-nowrap">
+                    <th>
+                        Project Name
+                    </th>
+                    <th>
+                        Created Date
+                    </th>
+                    <th>
+                        Target Date
+                    </th>
+                    <th>
+                        War Room Assigned
+                    </th>
+                    <th>
+                        War Room Assigned Date
+                    </th>
+                    <th>
+                        From Date
+                    </th>
+                    <th>
+                        End Date
+                    </th>
+                    <th>
+                        Model Leader
+                    </th>
+                    <th>
+                        Project Leader
+                    </th>
+                </tr>
+                @for (int i=0;i<5;i++)
+                {
+                    <tr>
+                        <td>{Proj1}</td>
+                        <td>{Proj1CreatedDate}</td>
+                        <td>{Proj1TargetDate}</td>
+                        <td>{Room1}</td>
+                        <td>{RoomAssignedDate}</td>
+                        <td>{RoomStartDate}</td>
+                        <td>{RoomEndDate}</td>
+                        <td>{ModelLeader}</td>
+                        <td>{ProjectLeader}</td>
+                    </tr>
+                }
+            </table>
+        </div>
+    </fieldset>
+</div>
+

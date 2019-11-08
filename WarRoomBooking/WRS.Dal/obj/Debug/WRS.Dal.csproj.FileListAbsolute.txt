@@ -1,0 +1,5 @@
+E:\ToolXMLtoExcel\WarRoomBooking\WRS.Dal\bin\Debug\WRS.Dal.dll
+E:\ToolXMLtoExcel\WarRoomBooking\WRS.Dal\bin\Debug\WRS.Dal.pdb
+E:\ToolXMLtoExcel\WarRoomBooking\WRS.Dal\obj\Debug\WRS.Dal.dll
+E:\ToolXMLtoExcel\WarRoomBooking\WRS.Dal\obj\Debug\WRS.Dal.pdb
+E:\ToolXMLtoExcel\WarRoomBooking\WRS.Dal\obj\Debug\WRS.Dal.csprojResolveAssemblyReference.cache

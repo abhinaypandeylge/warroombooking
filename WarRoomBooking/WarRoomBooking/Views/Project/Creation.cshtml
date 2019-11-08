@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewBag.Title = "War Room Schedule";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="page-header">Project Creation</h2>
+
+<fieldset>
+    <div class="row">
+        <div class="col-sm-3 form-group">
+            <label>Project Name:</label>
+            <input type="text" class="form-control" />
+        </div>
+        <div class="col-sm-3 form-group">
+            <label>Target Date:</label>
+            <input type="date" class="form-control" />
+        </div>
+        <div class="col-sm-3 form-group">
+            <label>Model Leader:</label>
+            <input type="text" class="form-control" />
+        </div>
+        <div class="col-sm-3 form-group">
+            <label>Project Leader:</label>
+            <input type="text" class="form-control" />
+        </div>
+        <div class="col-sm-3 form-group">
+            <label>Engineer:</label>
+            <select multiple class="form-control"></select>
+        </div>
+    </div>
+    <div class="form-group">
+        <input type="button" value="Save" class="btn btn-primary" />
+        <input type="button" value="Cancel" class="btn btn-secondary" />
+    </div>
+</fieldset>
+
